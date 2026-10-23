@@ -1,0 +1,34 @@
+go-oas-viewer
+Copyright 2026 iseki
+https://github.com/iseki0/go-oas-viewer
+
+Original project code is licensed under the Apache License, Version 2.0.
+See LICENSE for the full license text.
+
+This product includes software developed by the Scalar, Stoplight Elements,
+and Swagger UI projects, together with their respective dependencies.
+Third-party components retain their own copyright notices and licenses;
+the project license does not replace those terms.
+
+Direct embedded viewer components:
+  @scalar/api-reference 1.75.0 - MIT
+    https://github.com/scalar/scalar
+  @stoplight/elements 9.0.29 - Apache-2.0
+    https://github.com/stoplightio/elements
+  swagger-ui-dist 5.34.0 - Apache-2.0
+    https://github.com/swagger-api/swagger-ui
+
+The following notice is reproduced from swagger-ui-dist/NOTICE:
+
+swagger-ui
+Copyright 2020-2021 SmartBear Software Inc.
+
+See THIRD_PARTY_NOTICES.md and web/assets/third-party-licenses.txt for
+third-party attribution and license texts. The latter file is generated
+from the bundled dependencies and is included in the embedded resources.
+Go module dependencies are identified in go.mod and go.sum and retain
+their respective licenses and attribution notices.
+
+Copies of this NOTICE and the project LICENSE are also distributed in
+web/assets/NOTICE.txt and web/assets/LICENSE.txt for embedded deployments.
+This NOTICE is informational and does not modify any license terms.

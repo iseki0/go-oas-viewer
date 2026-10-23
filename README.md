@@ -28,7 +28,7 @@ go env -w GOPRIVATE=github.com/iseki0/go-oas-viewer
 go get github.com/iseki0/go-oas-viewer@latest
 ```
 
-私有仓库需要先配置 GitHub Git 访问凭证。若已有 GOPRIVATE，请将上述路径追加到现有配置，不要覆盖其他私有 module 配置。当前未发布版本标签，@latest 使用默认分支的伪版本。import 路径与 module 均为 github.com/iseki0/go-oas-viewer，包名为 oasviewer。
+私有仓库需要先配置 GitHub Git 访问凭证。若已有 GOPRIVATE，请将上述路径追加到现有配置，不要覆盖其他私有 module 配置。Git 标签 v0.1 标记初始版本；Go 的完整语义版本标签格式为 v0.1.0，因此 @latest 当前使用默认分支的伪版本。import 路径与 module 均为 github.com/iseki0/go-oas-viewer，包名为 oasviewer。
 
 ## 本地接入
 
@@ -153,3 +153,10 @@ go build -trimpath -ldflags "-s -w -buildid=" ./examples/basic
 frontend/ 是维护源，web/ 是构建产物，必须一起提交。package-lock.json 锁定前端依赖，go.sum 锁定 Go 依赖。构建脚本会在 node_modules 创建独立 go.mod 边界，避免 go test ./... 扫描 npm 依赖树。Vite 大 chunk 提示是资源体积提示，不表示构建失败。第三方许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 和 web/assets 下的许可文件。
 
 首次接入或更新依赖后，在浏览器打开三个页面，确认标题、导航高亮、规格内容、Try it、扩展和网络资源均正确。Go HTTP 测试不代替浏览器渲染检查。Swagger OAuth2 重定向登录不是本库的业务登录扩展；当前不提供专用 OAuth2 回调页，需额外接入后再启用该流程。
+
+## License
+
+本项目原创代码采用 [Apache License 2.0](LICENSE)，Copyright 2026 iseki。
+项目与上游归属声明见 [NOTICE](NOTICE)，第三方组件使用各自的许可，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+构建会把 LICENSE 与 NOTICE 复制到 web/assets/LICENSE.txt 和 web/assets/NOTICE.txt，与完整第三方许可一起 go:embed。分发源码或二进制时请保留相关许可与归属文件。

@@ -177,7 +177,7 @@ func New(config Config) (gin.HandlerFunc, error) {
 			c.Status(http.StatusNotFound)
 			return
 		}
-		if name == "assets/third-party-licenses.txt" {
+		if strings.HasSuffix(name, ".txt") {
 			c.Header("Cache-Control", "no-cache")
 		} else {
 			c.Header("Cache-Control", "public, max-age=31536000, immutable")

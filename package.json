@@ -2,12 +2,19 @@
   "name": "go-oas-viewer-assets",
   "private": true,
   "type": "module",
-  "scripts": { "build": "node scripts/build.mjs" },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
   "dependencies": {
     "@scalar/api-reference": "1.75.0",
     "@stoplight/elements": "9.0.29",
     "swagger-ui-dist": "5.34.0"
   },
-  "devDependencies": { "vite": "8.3.4" },
-  "scarfSettings": { "enabled": false }
+  "devDependencies": {
+    "vite": "8.3.4"
+  },
+  "scarfSettings": {
+    "enabled": false
+  },
+  "license": "Apache-2.0"
 }

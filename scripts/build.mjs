@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { copyFile, readFile, writeFile } from 'node:fs/promises';
 import { build } from 'vite';
 
 // 阻止 go test ./... 扫描庞大的 npm 依赖树及其中的第三方 Go 示例。
@@ -15,3 +15,7 @@ for (const [viewer, name] of Object.entries(packages)) {
   versions[viewer] = { package: name, version: pkg.version };
 }
 await build({ define: { __VIEWER_VERSIONS__: JSON.stringify(versions) } });
+// 将项目许可及上游 NOTICE 随 Go 内嵌资源一起分发。
+for (const [source, target] of [['LICENSE', 'LICENSE.txt'], ['NOTICE', 'NOTICE.txt']]) {
+  await copyFile(new URL('../' + source, import.meta.url), new URL('../web/assets/' + target, import.meta.url));
+}

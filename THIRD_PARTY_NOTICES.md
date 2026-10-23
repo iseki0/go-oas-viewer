@@ -1,5 +1,7 @@
 # Third-party notices
 
+项目原创代码采用 Apache-2.0，见 LICENSE；项目 NOTICE 保留上游 swagger-ui-dist 的 NOTICE 原文。第三方代码保持各自许可。LICENSE 和 NOTICE 同时随 web/assets 中的副本内嵌。
+
 本库内嵌由以下前端软件构建的资源：
 
 | Package | Version | License | Source |
