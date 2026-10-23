@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{.Title}}</title>
+</head>
+<body>
+  <nav class="viewer-nav" aria-label="API 查看器">
+      <a href="./index.html">Scalar</a>
+      <a href="./elements.html" aria-current="page">Stoplight Elements</a>
+      <a href="./swagger.html">Swagger UI</a>
+    <div id="viewer-toolbar" aria-label="扩展工具栏"></div>
+  </nav>
+  <div id="viewer-config" data-config="{{.Config}}" hidden></div>
+  <p id="viewer-status" role="status" aria-live="polite" hidden></p>
+  <div id="app"></div>
+  <script type="module" src="./elements.js"></script>
+</body>
+</html>
